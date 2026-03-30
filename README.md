@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Digital Banking Fraud Detection & Simulation Engine
 
 ## Project Overview
@@ -267,3 +268,16 @@ This project is created for **educational and research purposes**.
 =======
 # FraudShield
 >>>>>>> 85d81222bc48d56c3ae3e38da371f698b82c521d
+=======
+# FraudShield
+
+A banking fraud detection system using:
+- Backend: Spring Boot
+- Frontend: React
+- ML Model: Python
+
+## Features
+- Fraud detection
+- Transaction monitoring
+- Alerts system
+>>>>>>> 9e358b1e5369218affc04d9144ec1907d1cc2898
