@@ -25,9 +25,9 @@ public class Transaction {
     @Column(length = 1000)
     private String message;
 
-    // ===============================
+    //     ===
     // FRAUD CONTEXT FEATURES
-    // ===============================
+    //     ===
 
     private String merchantCategory;
     private int foreignTransaction;
@@ -36,9 +36,9 @@ public class Transaction {
     private double velocityLast24h;
     private int cardholderAge;
 
-    // ===============================
+    //     ===
     // SIMULATION FIELDS
-    // ===============================
+    //     ===
 
     private boolean isSimulated = false;
     private boolean isFlagged = false;
@@ -46,9 +46,9 @@ public class Transaction {
     // NEW FIELD (for accuracy evaluation)
     private String simulationType;
 
-    // ===============================
+    //     ===
     // PIN (Input Only - Not Stored)
-    // ===============================
+    //     ===
 
     @Transient
     @com.fasterxml.jackson.annotation.JsonProperty(
@@ -58,9 +58,9 @@ public class Transaction {
 
     public Transaction() {}
 
-    // ===============================
+    //     ===
     // GETTERS AND SETTERS
-    // ===============================
+    //     ===
 
     public Long getTransactionId() { return transactionId; }
     public void setTransactionId(Long transactionId) { this.transactionId = transactionId; }

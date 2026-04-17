@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+ 
+ 
 # Digital Banking Fraud Detection & Simulation Engine
 
 ## Project Overview
@@ -265,10 +265,10 @@ Hariprasath B
 ## License
 
 This project is created for **educational and research purposes**.
-=======
+ 
 # FraudShield
 >>>>>>> 85d81222bc48d56c3ae3e38da371f698b82c521d
-=======
+ 
 # FraudShield
 
 A banking fraud detection system using:

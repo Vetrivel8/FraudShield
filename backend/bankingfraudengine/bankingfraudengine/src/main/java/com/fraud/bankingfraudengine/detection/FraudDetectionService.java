@@ -45,9 +45,9 @@ public class FraudDetectionService {
         double ruleScore = 0;
         StringBuilder message = new StringBuilder();
 
-        // ===============================
+        //     ===
         // RULE 1 — HIGH AMOUNT
-        // ===============================
+        //     ===
         if (transaction.getAmount() >= highAmountThreshold) {
             ruleScore += 60;
             message.append("High amount detected (≥ ")
@@ -55,17 +55,17 @@ public class FraudDetectionService {
                     .append("). ");
         }
 
-        // ===============================
+        //     ===
         // RULE 2 — BLACKLIST
-        // ===============================
+        //     ===
         if (BLACKLISTED.contains(transaction.getReceiverAccountNumber())) {
             ruleScore += 40;
             message.append("Receiver is blacklisted. ");
         }
 
-        // ===============================
+        //     ===
         // RULE 3 — RAPID TRANSACTION
-        // ===============================
+        //     ===
         LocalDateTime twoMinutesAgo = LocalDateTime.now().minusMinutes(2);
 
         long recentCount =
@@ -79,9 +79,9 @@ public class FraudDetectionService {
             message.append("Rapid transactions detected. ");
         }
 
-        // ===============================
+        //     ===
         // ML CALL
-        // ===============================
+        //     ===
         double mlProbability = 0.0;
         String mlRiskLevel = "SAFE";
 
@@ -116,9 +116,9 @@ public class FraudDetectionService {
             message.append("ML unavailable. ");
         }
 
-        // ===============================
+        //     ===
         // HYBRID SCORING (DEMO TUNED)
-        // ===============================
+        //     ===
         double finalScore = ruleScore + (mlProbability * 180);
 
         // 🔥 Bias to reduce FN
@@ -126,9 +126,9 @@ public class FraudDetectionService {
 
         transaction.setFraudScore(finalScore);
 
-        // ===============================
+        //     ===
         // THRESHOLDS (AGGRESSIVE)
-        // ===============================
+        //     ===
         if (finalScore >= 65) {
             transaction.setFraudStatus("HIGH_RISK");
         } else if (finalScore >= 35) {
@@ -142,9 +142,9 @@ public class FraudDetectionService {
 
         transaction.setMessage(message.toString());
 
-        // ===============================
+        //     ===
         // ALERT + EMAIL
-        // ===============================
+        //     ===
         if ("HIGH_RISK".equals(transaction.getFraudStatus())) {
 
             Alert alert = new Alert();

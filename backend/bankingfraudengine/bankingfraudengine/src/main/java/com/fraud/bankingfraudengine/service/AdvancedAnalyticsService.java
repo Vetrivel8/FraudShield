@@ -24,9 +24,9 @@ public class AdvancedAnalyticsService {
                 .toList();
     }
 
-    // ===============================
+    //     ===
     // FRAUD RATE
-    // ===============================
+    //     ===
     public double calculateFraudRate() {
 
         List<Transaction> all = getSimulatedTransactions();
@@ -42,9 +42,9 @@ public class AdvancedAnalyticsService {
         return round((fraudCount * 100.0) / total);
     }
 
-    // ===============================
+    //     ===
     // BINARY ACCURACY
-    // ===============================
+    //     ===
     public double calculateBinaryAccuracy() {
 
         List<Transaction> all = getSimulatedTransactions();
@@ -68,9 +68,9 @@ public class AdvancedAnalyticsService {
         return round((correct * 100.0) / total);
     }
 
-    // ===============================
+    //     ===
     // METRICS (CONTROLLED FN)
-    // ===============================
+    //     ===
     public Map<String, Object> getFraudMetrics() {
 
         List<Transaction> all = getSimulatedTransactions();

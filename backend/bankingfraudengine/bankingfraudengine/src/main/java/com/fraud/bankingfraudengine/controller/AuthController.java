@@ -21,9 +21,9 @@ public class AuthController {
         this.jwtUtil = jwtUtil;
     }
 
-    // ===============================
+    //     ===
     // REGISTER USER (DEFAULT USER ROLE)
-    // ===============================
+    //     ===
 
     @PostMapping("/register")
     public Map<String, String> register(@RequestBody Map<String, String> request) {
@@ -44,9 +44,9 @@ public class AuthController {
         return Map.of("message", "User registered successfully");
     }
 
-    // ===============================
+    //     ===
     // LOGIN USER
-    // ===============================
+    //     ===
 
     @PostMapping("/login")
     public Map<String, String> login(@RequestBody Map<String, String> request) {

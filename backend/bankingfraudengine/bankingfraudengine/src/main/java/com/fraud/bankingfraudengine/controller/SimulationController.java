@@ -22,9 +22,9 @@ public class SimulationController {
         this.advancedAnalyticsService = advancedAnalyticsService;
     }
 
-    // ===============================
+    //     ===
     // GENERATE SIMULATION DATA
-    // ===============================
+    //     ===
 
     @PostMapping("/generate")
     public ResponseEntity<String> generateSimulation(
@@ -34,27 +34,27 @@ public class SimulationController {
         return ResponseEntity.ok("Simulation generated: " + count + " transactions.");
     }
 
-    // ===============================
+    //     ===
     // GET ALL SIMULATED
-    // ===============================
+    //     ===
 
     @GetMapping("/all")
     public List<Transaction> getAllSimulated() {
         return simulationService.getAllSimulated();
     }
 
-    // ===============================
+    //     ===
     // GET FLAGGED (HIGH RISK)
-    // ===============================
+    //     ===
 
     @GetMapping("/flagged")
     public List<Transaction> getFlagged() {
         return simulationService.getFlagged();
     }
 
-    // ===============================
+    //     ===
     // GET SAFE
-    // ===============================
+    //     ===
 
     @GetMapping("/safe")
     public List<Transaction> getSafeTransactions() {
@@ -67,9 +67,9 @@ public class SimulationController {
                 .toList();
     }
 
-    // ===============================
+    //     ===
     // GET MEDIUM RISK
-    // ===============================
+    //     ===
 
     @GetMapping("/medium")
     public List<Transaction> getMediumRiskTransactions() {
@@ -79,9 +79,9 @@ public class SimulationController {
                 .collect(Collectors.toList());
     }
 
-    // ===============================
+    //     ===
     // GET SUMMARY
-    // ===============================
+    //     ===
 
     @GetMapping("/summary")
     public ResponseEntity<?> getSummary() {
@@ -115,9 +115,9 @@ public class SimulationController {
         );
     }
 
-    // ===============================
+    //     ===
     // FRAUD RATE PERCENTAGE
-    // ===============================
+    //     ===
 
     @GetMapping("/fraud-rate")
     public double getFraudRate() {

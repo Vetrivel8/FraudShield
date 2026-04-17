@@ -36,9 +36,9 @@ public class SimulationService {
         this.fraudDetectionService = fraudDetectionService;
     }
 
-    // ===============================
+    //     ===
     // GENERATE SIMULATION
-    // ===============================
+    //     ===
 
     public void generateSimulation(int count) {
 
@@ -106,15 +106,15 @@ public class SimulationService {
             tx.setDeviceTrustScore(random.nextDouble());
             tx.setCardholderAge(18 + random.nextInt(50));
 
-            // ===============================
+            //     ===
             // SAVE FIRST TO GENERATE ID
-            // ===============================
+            //     ===
 
             tx = transactionRepository.save(tx);
 
-            // ===============================
+            //     ===
             // FRAUD DETECTION
-            // ===============================
+            //     ===
 
             fraudDetectionService.evaluateTransaction(tx);
 
@@ -127,9 +127,9 @@ public class SimulationService {
         }
     }
 
-    // ===============================
+    //     ===
     // GET METHODS
-    // ===============================
+    //     ===
 
     public List<Transaction> getAllSimulated() {
         return transactionRepository.findAll()
